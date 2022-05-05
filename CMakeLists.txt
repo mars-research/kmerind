@@ -22,7 +22,7 @@ message(STATUS "cmake cxx flags relwithdebinfo. ${CMAKE_CXX_FLAGS_RELWITHDEBINFO
 ### REQUIRE C++11
 # Initialize CXXFLAGS.
 #add_definitions(-Wall -Wuninitialized -std=c++11 -fPIC)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wuninitialized -std=c++11 -fPIC")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wuninitialized -std=c++11 -fPIC -fdiagnostics-color=always")
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG -funroll-loops")
 set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O3 -funroll-loops -g")
@@ -692,7 +692,7 @@ else(ENABLE_MEMUSE_BENCHMARK)
   SET(BL_BENCHMARK_MEM 0)
 endif(ENABLE_MEMUSE_BENCHMARK)
 
-CMAKE_DEPENDENT_OPTION(ENABLE_KMER_BENCHMARK "Enable Kmer index Benchmarks" OFF
+CMAKE_DEPENDENT_OPTION(ENABLE_KMER_BENCHMARK "Enable Kmer index Benchmarks" ON
                         "ENABLE_BENCHMARKING" OFF)
 if (ENABLE_KMER_BENCHMARK)
   SET(BL_KMER_BENCHMARK 1)

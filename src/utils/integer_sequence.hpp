@@ -36,6 +36,8 @@
 #include <cstdint>
 #include <tuple>
 
+using std::size_t;
+
 namespace bliss
 {
   namespace utils
