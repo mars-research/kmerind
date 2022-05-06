@@ -7,3 +7,6 @@
 [submodule "ext/sparsehash-c11"]
 	path = ext/sparsehash-c11
 	url = https://github.com/sparsehash/sparsehash-c11.git
+[submodule "kmerind-results"]
+	path = kmerind-results
+	url = git@github.com:mars-research/kmerind-results.git
