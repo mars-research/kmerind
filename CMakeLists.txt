@@ -669,7 +669,7 @@ if (ENABLE_TESTING)
 
 endif(ENABLE_TESTING)
 
-OPTION(ENABLE_BENCHMARKING "Enable benchmarking." OFF)
+OPTION(ENABLE_BENCHMARKING "Enable benchmarking." ON)
 # set here since timer needs to have this defined allways.
 if (ENABLE_BENCHMARKING)
   SET(BL_BENCHMARK 1)
